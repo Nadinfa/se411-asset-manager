@@ -4,8 +4,6 @@ AssetTrack is a **React frontend CRUD application** for managing one company ass
 
 ## Team
 
-> Replace these placeholders before submission.
-
 - Nadin Alaskar — 222410587
 - Leena Almosa — 222410578
 
@@ -98,23 +96,3 @@ npm run build
 - `docs/requirements.md` — field list, functional requirements, CRUD user stories, page outline, and non-functional requirements
 - `docs/architecture.md` — architecture, component tree, state management, technology stack, features, and testing
 
-## Before Submission
-
-1. Replace the placeholder team names/student IDs in both `src/components/About.jsx` and this README.
-2. Run `npm install`.
-3. Run `npm test` and confirm all tests pass.
-4. Run `npm run build` and confirm the production build succeeds.
-5. Create one public GitHub repository for the team.
-6. Commit and push this complete frontend project.
-7. Submit the public GitHub repository URL as required.
-
-## Suggested Git Commands
-
-```bash
-git init
-git add .
-git commit -m "Complete SE411 Part 1 React asset manager"
-git branch -M main
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
-git push -u origin main
-```
