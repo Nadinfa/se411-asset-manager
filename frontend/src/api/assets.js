@@ -15,6 +15,12 @@ export function createAsset(asset) {
   return request(BASE, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(asset) });
 }
 export function saveAsset(asset) {
-  return request(`${BASE}/${asset.id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(asset) });
+  const { id, ...assetWithoutId } = asset;
+
+  return request(`${BASE}/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(assetWithoutId)
+  });
 }
 export function removeAsset(id) { return request(`${BASE}/${id}`, { method: 'DELETE' }); }

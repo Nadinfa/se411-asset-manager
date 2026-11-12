@@ -21,7 +21,7 @@ public class AssetService {
                 asset.status(), asset.assignedTo(), asset.purchaseDate()));
     }
 
-    public Optional<Asset> getById(Long id) {
+    public Optional<Asset> findById(Long id) {
         return repository.findById(id);
     }
 

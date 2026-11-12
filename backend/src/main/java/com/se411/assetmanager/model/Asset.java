@@ -1,15 +1,16 @@
 package com.se411.assetmanager.model;
 
 import org.springframework.data.annotation.Id;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("ASSET")
+@Table("asset")
 public record Asset(
         @Id Long id,
-        String name,
-        String brand,
-        String model,
-        String status,
+        @NotBlank String name,
+        @NotBlank String brand,
+        @NotBlank String model,
+        @NotBlank String status,
         String assignedTo,
-        String purchaseDate) {
+        @NotBlank String purchaseDate) {
 }

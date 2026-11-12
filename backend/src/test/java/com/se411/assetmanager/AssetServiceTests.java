@@ -44,13 +44,13 @@ class AssetServiceTests {
     @Test
     void findExistingAsset() {
         when(repository.findById(1L)).thenReturn(Optional.of(sample));
-        assertEquals("MacBook", service.getById(1L).orElseThrow().name());
+        assertEquals("MacBook", service.findById(1L).orElseThrow().name());
     }
 
     @Test
     void findMissingAsset() {
         when(repository.findById(99L)).thenReturn(Optional.empty());
-        assertTrue(service.getById(99L).isEmpty());
+        assertTrue(service.findById(99L).isEmpty());
     }
 
     @Test

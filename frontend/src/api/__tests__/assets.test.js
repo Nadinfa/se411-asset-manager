@@ -19,6 +19,12 @@ test('posts new asset as JSON', async () => {
 });
 test('updates by PUT', async () => {
   fetch.mockResolvedValue(response(null, 204));
+
   await saveAsset({ id: 8, name: 'Laptop' });
+
   expect(fetch.mock.calls[0][0]).toBe('/api/assets/8');
+  expect(fetch.mock.calls[0][1].method).toBe('PUT');
+  expect(fetch.mock.calls[0][1].body).toBe(
+    JSON.stringify({ name: 'Laptop' })
+  );
 });
